@@ -29,6 +29,18 @@ public class MainActivity extends AppCompatActivity {
             );
             Toast.makeText(this, pessoa.toString(), Toast.LENGTH_SHORT).show();
         });
+        amb.limparBt.setOnClickListener(view ->{
+            amb.nomeEt.setText("");
+            amb.telefoneEt.setText("");
+            amb.emailEt.setText("");
+            amb.dataNascimentoEt.setText("");
+            amb.formacaoSp.setSelection(0);
+            amb.femininoRb.setChecked(true);
+            amb.masculinoRb.setChecked(false);
+            amb.interessesEt.setText("");
+            amb.anoConclusao.setText("");
+            pessoa = null;
+        });
         amb.formacaoSp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {//View pai, a view clicada, posição clicada e o tamanho
                 if (i == 0 || i == 1) {
