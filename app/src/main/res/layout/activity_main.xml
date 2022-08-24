@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Cadastre-se para receber ofertas de emprego"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/nomeEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:hint="@string/nome"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:importantForAutofill="no" />
+        <EditText
+            android:id="@+id/emailEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:hint="@string/email"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:importantForAutofill="no" />
+        <Switch
+            android:id="@+id/receberEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Deseja receber nossos emails?"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:text="Telefone:"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <CheckBox
+            android:id="@+id/informarCelular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Informar o numero de celular"/>
+        <EditText
+            android:id="@+id/celularEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:hint="@string/celular"
+            android:visibility="gone"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:importantForAutofill="no" />
+        <EditText
+            android:id="@+id/telefoneEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:hint="@string/telefone"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:importantForAutofill="no" />
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:layout_margin="5dp">
+            <RadioButton
+                android:id="@+id/residencialRb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/residencial"
+                android:layout_weight="1"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/comercialRb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/comercial"
+                android:layout_weight="1"
+                android:checked="false"
+                android:orientation="horizontal"
+                />
+        </RadioGroup>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Data de Nascimento:"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/dataNascimentoEt"
+            android:inputType="date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Sexo:"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:layout_margin="5dp">
+            <RadioButton
+                android:id="@+id/femininoRb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/feminino"
+                android:layout_weight="1"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/masculinoRb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/masculino"
+                android:layout_weight="1"
+                android:checked="false"
+                android:orientation="horizontal"
+                />
+        </RadioGroup>
+        <Spinner
+            android:id="@+id/formacaoSp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/formacao"
+            android:visibility="gone"
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:layout_margin="5dp"/>
+        <EditText
+            android:id="@+id/anoFormacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="@string/ano_de_formacao"
+            android:visibility="gone"
+            android:minHeight="48dp"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:importantForAutofill="no" />
+        <EditText
+            android:id="@+id/anoConclusao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="@string/ano_de_conclusao"
+            android:visibility="gone"
+            android:minHeight="48dp"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:importantForAutofill="no" />
+        <EditText
+            android:id="@+id/instituicao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/intituicao"
+            android:visibility="gone"
+            android:minHeight="48dp"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:importantForAutofill="no" />
+        <EditText
+            android:id="@+id/tituloMonografia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/titulo_da_monografia"
+            android:visibility="gone"
+            android:minHeight="48dp"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:importantForAutofill="no" />
+        <EditText
+            android:id="@+id/orientador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="@string/orientador"
+            android:visibility="gone"
+            android:minHeight="48dp"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:importantForAutofill="no" />
+        <TextView
+            android:id="@+id/interessesEt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Areas de Interesse:"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/salvarBt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/salvar"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            tools:ignore="OnClick" />
+        <Button
+            android:id="@+id/limparBt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/limpar"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            tools:ignore="OnClick" />
+</LinearLayout>
+</ScrollView>
