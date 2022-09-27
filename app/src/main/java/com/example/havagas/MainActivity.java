@@ -9,9 +9,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.havagas.databinding.ActivityMainBinding;
 
+
+
 public class MainActivity extends AppCompatActivity {
+    private static final Object VALOR_ET_DINAMICO = "";
     private ActivityMainBinding amb;
     private Pessoa pessoa;
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,14 +29,14 @@ public class MainActivity extends AppCompatActivity {
                     amb.nomeEt.getText().toString(),
                     amb.emailEt.getText().toString(),
                     amb.telefoneEt.getText().toString(),
-                    amb.femininoRb.isChecked()? "feminino" : "masculino",
+                    amb.femininoRb.isChecked() ? "feminino" : "masculino",
                     amb.dataNascimentoEt.getText().toString(),
                     amb.formacaoSp.getSelectedItem().toString(),
                     amb.interessesEt.getText().toString()
             );
             Toast.makeText(this, pessoa.toString(), Toast.LENGTH_SHORT).show();
         });
-        amb.limparBt.setOnClickListener(view ->{
+        amb.limparBt.setOnClickListener(view -> {
             amb.nomeEt.setText("");
             amb.telefoneEt.setText("");
             amb.emailEt.setText("");
@@ -71,9 +78,14 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        if(amb.informarCelular.isActivated()){
+        if (amb.informarCelular.isActivated()) {
             amb.celularEt.setVisibility(View.GONE);
         }
 
         }
+
+
+
     }
+
+
